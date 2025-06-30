@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قسمة الكسور العشرية - الصف السادس</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #182848, #4b6cb7);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #ff9800;
+        }
+        .back-btn {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            background: white;
+            color: #4b6cb7;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .lesson-title {
+            color: #182848;
+            text-align: center;
+            border-bottom: 2px dashed #182848;
+            padding-bottom: 10px;
+        }
+        .example {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-right: 5px solid #182848;
+        }
+        .example-title {
+            color: #182848;
+            margin-top: 0;
+        }
+        .steps {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .step {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .step-number {
+            background: #182848;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+            flex-shrink: 0;
+        }
+        .practice {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #2e7d32;
+        }
+        .practice-title {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #182848;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #0d1b36;
+        }
+        .solution {
+            display: none;
+            background: #fffde7;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: 1px dashed #ff9800;
+        }
+        .interactive-tool {
+            background: #f3e5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .interactive-title {
+            color: #6a1b9a;
+            margin-top: 0;
+        }
+        input[type="number"] {
+            padding: 8px;
+            border: 1px solid #182848;
+            border-radius: 4px;
+            width: 80px;
+            text-align: center;
+        }
+        .result {
+            font-weight: bold;
+            color: #d32f2f;
+            margin-top: 10px;
+        }
+        .footer {
+            background: #182848;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .animation {
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .visual-example {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .division-box {
+            border: 2px solid #182848;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px;
+            text-align: center;
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header animation">
+        <button class="back-btn" onclick="window.location.href='index.html'">العودة للصفحة الرئيسية</button>
+        <h1>الدرس الثاني: قسمة الكسور العشرية</h1>
+    </div>
+
+    <div class="container animation">
+        <h2 class="lesson-title">شرح مفهوم قسمة الكسور العشرية</h2>
+        
+        <p>لقسمة كسر عشري على آخر، نتبع الخطوات التالية:</p>
+        
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div>نحرك الفاصلة العشرية في المقسوم عليه (المقسوم عليه هو العدد الذي نقسم عليه) لليمين حتى يصبح عدداً صحيحاً</div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>نحرك الفاصلة العشرية في المقسوم (العدد الذي يتم قسمته) بنفس عدد المرات إلى اليمين</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div>نقوم بعملية القسمة الطويلة كما نعرفها على الأعداد الصحيحة</div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div>نضع الفاصلة العشرية في الناتج فوق الفاصلة في المقسوم بعد تحريكها</div>
+            </div>
+        </div>
+
+        <div class="visual-example">
+            <div class="division-box">
+                <div>1.5 ÷ 0.5</div>
+                <div style="font-size: 24px;">↓</div>
+                <div>نحرك الفاصلة مكان واحد في المقسوم عليه والمقسوم</div>
+                <div style="font-size: 24px;">↓</div>
+                <div>15 ÷ 5 = 3</div>
+            </div>
+        </div>
+
+        <div class="example">
+            <h3 class="example-title">مثال 1:</h3>
+            <p>احسب ناتج قسمة 0.6 ÷ 0.2</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>المقسوم عليه هو 0.2، نحرك الفاصلة مكان واحد لليمين: 0.2 ← 2</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>نحرك الفاصلة في المقسوم 0.6 مكان واحد: 0.6 ← 6</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>نقوم بالقسمة: 6 ÷ 2 = 3</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div>الناتج هو 3</div>
+                </div>
+            </div>
+            
+            <p><strong>الجواب:</strong> 0.6 ÷ 0.2 = 3</p>
+        </div>
+
+        <div class="example">
+            <h3 class="example-title">مثال 2:</h3>
+            <p>احسب ناتج قسمة 4.5 ÷ 0.15</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>المقسوم عليه هو 0.15، نحرك الفاصلة مكانين لليمين: 0.15 ← 15</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>نحرك الفاصلة في المقسوم 4.5 مكانين: 4.5 ← 450</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>نقوم بالقسمة: 450 ÷ 15 = 30</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div>الناتج هو 30</div>
+                </div>
+            </div>
+            
+            <p><strong>الجواب:</strong> 4.5 ÷ 0.15 = 30</p>
+        </div>
+
+        <div class="interactive-tool">
+            <h3 class="interactive-title">جرب بنفسك: آلة حاسبة لقسمة الكسور العشرية</h3>
+            <div>
+                <input type="number" step="0.01" id="decimal1" placeholder="أدخل المقسوم">
+                <span> ÷ </span>
+                <input type="number" step="0.01" id="decimal2" placeholder="أدخل المقسوم عليه">
+                <button class="btn" onclick="calculateDivide()">احسب</button>
+            </div>
+            <div id="divideResult" class="result"></div>
+        </div>
+
+        <div class="practice">
+            <h3 class="practice-title">تمارين تطبيقية</h3>
+            
+            <p>1) احسب ناتج قسمة 1.2 ÷ 0.3</p>
+            <button class="btn" onclick="showSolution(1)">عرض الحل</button>
+            <div id="solution1" class="solution">
+                <p>الحل:</p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>المقسوم عليه 0.3 ← 3 (تحريك فاصلة مكان واحد)</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>المقسوم 1.2 ← 12 (تحريك فاصلة مكان واحد)</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>12 ÷ 3 = 4</div>
+                    </div>
+                </div>
+                <p><strong>الجواب:</strong> 4</p>
+            </div>
+            
+            <p>2) احسب ناتج قسمة 0.75 ÷ 0.25</p>
+            <button class="btn" onclick="showSolution(2)">عرض الحل</button>
+            <div id="solution2" class="solution">
+                <p>الحل:</p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>المقسوم عليه 0.25 ← 25 (تحريك فاصلة مكانين)</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>المقسوم 0.75 ← 75 (تحريك فاصلة مكانين)</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>75 ÷ 25 = 3</div>
+                    </div>
+                </div>
+                <p><strong>الجواب:</strong> 3</p>
+            </div>
+            
+            <p>3) إذا كان طول قطعة قماش 4.8 متر وقُسمت إلى قطع طول كل منها 0.6 متر، فكم عدد القطع؟</p>
+            <button class="btn" onclick="showSolution(3)">عرض الحل</button>
+            <div id="solution3" class="solution">
+                <p>الحل:</p>
+                <p>عدد القطع = الطول الكلي ÷ طول القطعة الواحدة = 4.8 ÷ 0.6</p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>المقسوم عليه 0.6 ← 6 (تحريك فاصلة مكان واحد)</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>المقسوم 4.8 ← 48 (تحريك فاصلة مكان واحد)</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>48 ÷ 6 = 8 قطع</div>
+                    </div>
+                </div>
+                <p><strong>الجواب:</strong> 8 قطع</p>
+            </div>
+            
+            <p>4) اشترى خالد 3.6 كيلو جرام من السكر بمبلغ 7.2 دينار، كم سعر الكيلو جرام الواحد؟</p>
+            <button class="btn" onclick="showSolution(4)">عرض الحل</button>
+            <div id="solution4" class="solution">
+                <p>الحل:</p>
+                <p>سعر الكيلو = المبلغ الكلي ÷ الكمية = 7.2 ÷ 3.6</p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>المقسوم عليه 3.6 ← 36 (تحريك فاصلة مكان واحد)</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>المقسوم 7.2 ← 72 (تحريك فاصلة مكان واحد)</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>72 ÷ 36 = 2 دينار للكيلو</div>
+                    </div>
+                </div>
+                <p><strong>الجواب:</strong> 2 دينار للكيلو</p>
+            </div>
+            
+            <p>5) احسب ناتج قسمة 0.144 ÷ 0.12</p>
+            <button class="btn" onclick="showSolution(5)">عرض الحل</button>
+            <div id="solution5" class="solution">
+                <p>الحل:</p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>المقسوم عليه 0.12 ← 12 (تحريك فاصلة مكانين)</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>المقسوم 0.144 ← 14.4 (تحريك فاصلة مكانين)</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>14.4 ÷ 12 = 1.2</div>
+                    </div>
+                </div>
+                <p><strong>الجواب:</strong> 1.2</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>إعداد: د. غادة لنيل شهادة الماستر</p>
+        <p>© 2023 جميع الحقوق محفوظة</p>
+    </div>
+
+    <script>
+        function showSolution(num) {
+            var solution = document.getElementById('solution' + num);
+            if (solution.style.display === 'block') {
+                solution.style.display = 'none';
+            } else {
+                solution.style.display = 'block';
+            }
+        }
+        
+        function calculateDivide() {
+            var num1 = parseFloat(document.getElementById('decimal1').value);
+            var num2 = parseFloat(document.getElementById('decimal2').value);
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('divideResult').innerHTML = 'الرجاء إدخال عددين صحيحين';
+                return;
+            }
+            
+            if (num2 === 0) {
+                document.getElementById('divideResult').innerHTML = 'لا يمكن القسمة على صفر';
+                return;
+            }
+            
+            var result = num1 / num2;
+            document.getElementById('divideResult').innerHTML = 'الناتج: ' + num1 + ' ÷ ' + num2 + ' = ' + result;
+        }
+    </script>
+</body>
+  </html>
