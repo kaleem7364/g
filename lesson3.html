@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القياس وتطبيقات العمليات - الصف السادس</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #ff9800, #f57c00);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #4b6cb7;
+        }
+        .back-btn {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            background: white;
+            color: #ff9800;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .lesson-title {
+            color: #f57c00;
+            text-align: center;
+            border-bottom: 2px dashed #f57c00;
+            padding-bottom: 10px;
+        }
+        .example {
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-right: 5px solid #ff9800;
+        }
+        .example-title {
+            color: #e65100;
+            margin-top: 0;
+        }
+        .steps {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .step {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .step-number {
+            background: #ff9800;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+            flex-shrink: 0;
+        }
+        .practice {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #2e7d32;
+        }
+        .practice-title {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #ff9800;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #f57c00;
+        }
+        .solution {
+            display: none;
+            background: #fffde7;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: 1px dashed #ff9800;
+        }
+        .interactive-tool {
+            background: #f3e5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .interactive-title {
+            color: #6a1b9a;
+            margin-top: 0;
+        }
+        input[type="number"] {
+            padding: 8px;
+            border: 1px solid #ff9800;
+            border-radius: 4px;
+            width: 80px;
+            text-align: center;
+        }
+        .result {
+            font-weight: bold;
+            color: #d32f2f;
+            margin-top: 10px;
+        }
+        .footer {
+            background: #182848;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .animation {
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .measurement-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border-radius: 8px;
+            border: 2px solid #ff9800;
+        }
+        .conversion-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .conversion-table th, .conversion-table td {
+            border: 1px solid #ff9800;
+            padding: 8px;
+            text-align: center;
+        }
+        .conversion-table th {
+            background-color: #ffe0b2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header animation">
+        <button class="back-btn" onclick="window.location.href='index.html'">العودة للصفحة الرئيسية</button>
+        <h1>الدرس الثالث: القياس وتطبيقات العمليات على الكسور العشرية</h1>
+    </div>
+
+    <div class="container animation">
+        <h2 class="lesson-title">تطبيقات عملية على الكسور العشرية في القياس</h2>
+        
+        <p>تستخدم الكسور العشرية بكثرة في حياتنا اليومية، خاصة في القياسات المختلفة مثل الطول، الوزن، الحجم، والزمن. دعونا نتعلم كيفية تطبيق العمليات على الكسور العشرية في مواقف حياتية.</p>
+        
+        <img src="https://via.placeholder.com/400x200/ffe0b2/ff9800?text=القياسات+اليومية" alt="القياسات اليومية" class="measurement-image">
+        
+        <h3>تحويل الوحدات باستخدام الكسور العشرية</h3>
+        
+        <table class="conversion-table">
+            <tr>
+                <th>التحويل</th>
+                <th>المعامل</th>
+                <th>مثال</th>
+            </tr>
+            <tr>
+                <td>من متر إلى سنتيمتر</td>
+                <td>× 100</td>
+                <td>1.5 م = 1.5 × 100 = 150 سم</td>
+            </tr>
+            <tr>
+                <td>من كيلوجرام إلى جرام</td>
+                <td>× 1000</td>
+                <td>2.3 كجم = 2.3 × 1000 = 2300 جم</td>
+            </tr>
+            <tr>
+                <td>من لتر إلى ملليلتر</td>
+                <td>× 1000</td>
+                <td>0.75 ل = 0.75 × 1000 = 750 مل</td>
+            </tr>
+            <tr>
+                <td>من ساعة إلى دقيقة</td>
+                <td>× 60</td>
+                <td>1.5 ساعة = 1.5 × 60 = 90 دقيقة</td>
+            </tr>
+        </table>
+
+        <div class="example">
+            <h3 class="example-title">مثال 1: تحويل الوحدات</h3>
+            <p>إذا كان طول حبل 3.75 متر، فكم يساوي بالسنتيمتر؟</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>نعلم أن 1 متر = 100 سنتيمتر</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>لذا نضرب طول الحبل بالمتر في 100: 3.75 × 100</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>عند ضرب عدد عشري في 100 نحرك الفاصلة مكانين لليمين: 3.75 ← 375</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div>إذاً: 3.75 م = 375 سم</div>
+                </div>
+            </div>
+            
+            <p><strong>الجواب:</strong> 375 سنتيمتر</p>
+        </div>
+
+        <div class="example">
+            <h3 class="example-title">مثال 2: تطبيق عملي</h3>
+            <p>اشترت سارة 3.5 كيلوجرام من التفاح، و2.75 كيلوجرام من البرتقال، و1.25 كيلوجرام من الموز. كم مجموع ما اشترته بالجرام؟</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>نجمع الكميات أولاً بالكيلوجرام: 3.5 + 2.75 + 1.25</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>3.5 + 2.75 = 6.25</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>6.25 + 1.25 = 7.5 كيلوجرام</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div>نحول الكيلوجرام إلى جرام: 7.5 × 1000 = 7500 جرام</div>
+                </div>
+            </div>
+            
+            <p><strong>الجواب:</strong> 7500 جرام</p>
+        </div>
+
+        <div class="interactive-tool">
+            <h3 class="interactive-title">جرب بنفسك: محول الوحدات</h3>
+            <div>
+                <input type="number" step="0.01" id="inputValue" placeholder="أدخل القيمة">
+                <select id="conversionType">
+                    <option value="mToCm">متر إلى سنتيمتر</option>
+                    <option value="kmToM">كيلومتر إلى متر</option>
+                    <option value="kgToG">كيلوجرام إلى جرام</option>
+                    <option value="lToMl">لتر إلى ملليلتر</option>
+                    <option value="hourToMin">ساعة إلى دقيقة</option>
+                </select>
+                <button class="btn" onclick="convertUnits()">تحويل</button>
+            </div>
+            <div id="conversionResult" class="result"></div>
+        </div>
+
+        <div class="practice">
+            <h3 class="practice-title">تمارين تطبيقية</h3>
+            
+            <p>1) إذا كان طول سلك 4.8 متر، وقطع منه 3 قطع متساوية، فكم طول كل قطعة؟</p>
+            <button class="btn" onclick="showSolution(1)">عرض الحل</button>
+            <div id="solution1" class="solution">
+                <p>الحل:</p>
+                <p>طول كل قطعة = الطول الكلي ÷ عدد القطع = 4.8 ÷ 3</p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>نقسم 4.8 ÷ 3</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>4 ÷ 3 = 1 والباقي 1</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>ننزل 8 فيصبح 18</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>18 ÷ 3 = 6</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div>نضع الفاصلة في نفس مكانها في المقسوم: 1.6</div>
+                    </div>
+                </div>
+                <p><strong>الجواب:</strong> 1.6 متر</p>
+            </div>
+            
+            <p>2) إذا كان سعر كيلو التفاح 2.75 دينار، فكم ثمن 3.5 كيلو؟</p>
+            <button class="btn" onclick="showSolution(2)">عرض الحل</button>
+            <div id="solution2" class="solution">
+                <p>الحل:</p>
+                <p>الثمن الكلي = الكمية × السعر = 3.5 × 2.75</p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>نضرب 35 × 275 = 9625 (نتجاهل الفاصلة)</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>عدد الأرقام بعد الفاصلة في 3.5 هو 1</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>عدد الأرقام بعد الفاصلة في 2.75 هو 2</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>المجموع = 1 + 2 = 3</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div>نضع الفاصلة في الناتج 9625 بحيث يكون بعدها 3 أرقام: 9.625 دينار</div>
+                    </div>
+                </div>
+                <p><strong>الجواب:</strong> 9.625 دينار</p>
+            </div>
+            
+            <p>3) إذا كان متوسط سرعة سيارة 85.5 كم/ساعة، فكم تقطع في 2.5 ساعة؟</p>
+            <button class="btn" onclick="showSolution(3)">عرض الحل</button>
+            <div id="solution3" class="solution">
+                <p>الحل:</p>
+                <p>المسافة = السرعة × الزمن = 85.5 × 2.5</p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>نضرب 855 × 25 = 21375 (نتجاهل الفاصلة)</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>عدد الأرقام بعد الفاصلة في 85.5 هو 1</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>عدد الأرقام بعد الفاصلة في 2.5 هو 1</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>المجموع = 1 + 1 = 2</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div>نضع الفاصلة في الناتج 21375 بحيث يكون بعدها رقمين: 213.75 كم</div>
+                    </div>
+                </div>
+                <p><strong>الجواب:</strong> 213.75 كيلومتر</p>
+            </div>
+            
+            <p>4) إذا كان طول صندوق 1.2 متر وعرضه 0.8 متر وارتفاعه 0.5 متر، فما حجمه؟</p>
+            <button class="btn" onclick="showSolution(4)">عرض الحل</button>
+            <div id="solution4" class="solution">
+                <p>الحل:</p>
+                <p>حجم الصندوق = الطول × العرض × الارتفاع = 1.2 × 0.8 × 0.5</p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>أولاً نضرب 1.2 × 0.8</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>12 × 8 = 96</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>عدد الأرقام بعد الفاصلة: 1 + 1 = 2</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>1.2 × 0.8 = 0.96</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div>ثم نضرب الناتج في 0.5: 0.96 × 0.5</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div>96 × 5 = 480</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">7</div>
+                        <div>عدد الأرقام بعد الفاصلة: 2 + 1 = 3</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">8</div>
+                        <div>0.96 × 0.5 = 0.480 = 0.48 متر مكعب</div>
+                    </div>
+                </div>
+                <p><strong>الجواب:</strong> 0.48 متر مكعب</p>
+            </div>
+            
+            <p>5) إذا كان عمر أحمد 12.5 سنة وعمر أخيه 8.75 سنة، فما الفرق بين عمرهما؟</p>
+            <button class="btn" onclick="showSolution(5)">عرض الحل</button>
+            <div id="solution5" class="solution">
+                <p>الحل:</p>
+                <p>الفرق بين العمرين = 12.5 - 8.75</p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>نكتب العددين بشكل عمودي مع مراعاة الفاصلة:</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>12.50<br>-8.75<br>-----</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>0 - 5 لا يمكن، نستلف 1 من خانة العشرات</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>10 - 5 = 5</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div>4 - 7 لا يمكن، نستلف 1 من خانة الآحاد</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div>14 - 7 = 7</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">7</div>
+                        <div>1 - 8 لا يمكن، نستلف 1 من خانة العشرات</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">8</div>
+                        <div>11 - 8 = 3</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">9</div>
+                        <div>0 - 0 = 0</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">10</div>
+                        <div>الناتج: 3.75 سنة</div>
+                    </div>
+                </div>
+                <p><strong>الجواب:</strong> 3.75 سنة</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>إعداد: د. غادة لنيل شهادة الماستر</p>
+        <p>© 2023 جميع الحقوق محفوظة</p>
+    </div>
+
+    <script>
+        function showSolution(num) {
+            var solution = document.getElementById('solution' + num);
+            if (solution.style.display === 'block') {
+                solution.style.display = 'none';
+            } else {
+                solution.style.display = 'block';
+            }
+        }
+        
+        function convertUnits() {
+            var value = parseFloat(document.getElementById('inputValue').value);
+            var conversionType = document.getElementById('conversionType').value;
+            var result = 0;
+            var conversionText = '';
+            
+            if (isNaN(value)) {
+                document.getElementById('conversionResult').innerHTML = 'الرجاء إدخال قيمة صحيحة';
+                return;
+            }
+            
+            switch(conversionType) {
+                case 'mToCm':
+                    result = value * 100;
+                    conversionText = value + ' متر = ' + result + ' سنتيمتر';
+                    break;
+                case 'kmToM':
+                    result = value * 1000;
+                    conversionText = value + ' كيلومتر = ' + result + ' متر';
+                    break;
+                case 'kgToG':
+                    result = value * 1000;
+                    conversionText = value + ' كيلوجرام = ' + result + ' جرام';
+                    break;
+                case 'lToMl':
+                    result = value * 1000;
+                    conversionText = value + ' لتر = ' + result + ' ملليلتر';
+                    break;
+                case 'hourToMin':
+                    result = value * 60;
+                    conversionText = value + ' ساعة = ' + result + ' دقيقة';
+                    break;
+            }
+            
+            document.getElementById('conversionResult').innerHTML = conversionText;
+        }
+    </script>
+</body>
+                  </html>
